@@ -75,6 +75,7 @@ main(argc, argv)
 	char           db_string[DB_STRING_MAX];
 	char	       db_user[DB_STRING_MAX];
 	char	       db_password[DB_STRING_MAX];
+	char           db_infilename[DB_STRING_MAX];
         int            port= 3306;
 
 	int i;
