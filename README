@@ -1,3 +1,12 @@
+源码来源
+   源码来自bazaar，一个分布式的版本控制系统。下载其客户端后可使用如下命令下载源码：
+   bzr branch lp:~percona-dev/perconatools/tpcc-mysql
+   
+使用更改
+   tpcc_load 127.0.0.1:33000 tpcc1000 root "" 1000 data.txt
+             |hostname:port| [dbname| |user| |password| |WAREHOUSE| |filename|
+             
+原版：   
 1. Build binaries
    * cd scr ; make
    ( you should have mysql_config available in $PATH)
