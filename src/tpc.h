@@ -47,7 +47,7 @@ extern "C" {
  city.len = tmp; \
  tmp = FileAlphaString(2,2,state.arr); \
  state.len = tmp; \
- tmp = FileNumberString(9,9,zip.arr); \
+ tmp = MakeNumberString(9,9,zip.arr); \
  zip.len = tmp;}
 
 /*
@@ -88,7 +88,7 @@ void SetSeed (int seed);
 int RandomNumber (int min, int max);
 int NURand (unsigned A, unsigned x, unsigned y);
 int MakeAlphaString (int x, int y, char str[]);
-int FileAlphaString (int x, int y, char str[], FILE *file)
+int FileAlphaString (int x, int y, char str[], FILE *file);
 int MakeNumberString (int x, int y, char str[]);
 void gettimestamp (char str[], char *format, size_t n);
 void InitPermutation (void);
