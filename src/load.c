@@ -312,7 +312,7 @@ LoadItems()
 	int             i_im_id;
         char            i_name[25];
 	float           i_price;
-	char            i_data[51];
+	char            i_data[501];
 
 	int             idatasiz;
 	int             orig[MAXITEMS+1];
@@ -347,7 +347,7 @@ retry:
 
 		i_price = ((int) RandomNumber(100L, 10000L)) / 100.0;
 
-		idatasiz = FileAlphaString(26, 50, i_data, filep);
+		idatasiz = FileAlphaString(251, 500, i_data, filep);
 		i_data[idatasiz] = 0;
 
 		if (orig[i_id]) {
@@ -590,7 +590,7 @@ Stock(w_id)
 	char            s_dist_08[25];
 	char            s_dist_09[25];
 	char            s_dist_10[25];
-	char            s_data[51];
+	char            s_data[501];
 
 	int             sdatasiz;
 	int             orig[MAXITEMS+1];
@@ -629,7 +629,7 @@ retry:
 		s_dist_08[ FileAlphaString(24, 24, s_dist_08, filep) ] = 0;
 		s_dist_09[ FileAlphaString(24, 24, s_dist_09, filep) ] = 0;
 		s_dist_10[ FileAlphaString(24, 24, s_dist_10, filep) ] = 0;
-		sdatasiz = FileAlphaString(26, 50, s_data, filep);
+		sdatasiz = FileAlphaString(251, 500, s_data, filep);
 		s_data[sdatasiz] = 0;
 
 		if (orig[s_i_id]) {
@@ -839,7 +839,7 @@ Customer(d_id, w_id)
 	int             c_credit_lim;
 	float           c_discount;
 	float           c_balance;
-	char            c_data[501];
+	char            c_data[1001];
 
 	float           h_amount;
 
@@ -887,7 +887,7 @@ retry:
 		c_discount = ((float) RandomNumber(0L, 50L)) / 100.0;
 		c_balance = -10.0;
 
-		c_data[ FileAlphaString(300, 500, c_data, filep) ] = 0;
+		c_data[ FileAlphaString(500, 1000, c_data, filep) ] = 0;
 
 		/*EXEC SQL INSERT INTO
 		                customer
