@@ -64,10 +64,10 @@ int neword( int t_num,
 	int            o_id;
 	char            i_name[25];
 	float           i_price;
-	char            i_data[51];
+	char            i_data[501];
 	int            ol_i_id;
 	int            s_quantity;
-	char            s_data[51];
+	char            s_data[501];
 	char            s_dist_01[25];
 	char            s_dist_02[25];
 	char            s_dist_03[25];
