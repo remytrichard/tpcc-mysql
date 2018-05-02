@@ -57,8 +57,8 @@ int payment( int t_num,
 	int            c_credit_lim;
 	float           c_discount;
 	float           c_balance;
-	char            c_data[502];
-	char            c_new_data[502];
+	char            c_data[1002];
+	char            c_new_data[1002];
 	float           h_amount = h_amount_arg;
 	char            h_data[26];
 	char            d_name[11];
@@ -429,9 +429,9 @@ int payment( int t_num,
 			datetime, c_data);
 
 		strncat(c_new_data, c_data, 
-			500 - strlen(c_new_data));
+			1000 - strlen(c_new_data));
 
-		c_new_data[500] = '\0';
+		c_new_data[1000] = '\0';
 
 		proceed = 8;
 		/*EXEC_SQL UPDATE customer
