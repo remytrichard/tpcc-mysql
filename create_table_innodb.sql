@@ -126,7 +126,7 @@ i_id int not null,
 i_im_id int, 
 i_name varchar(24), 
 i_price decimal(5,2), 
-i_data varchar(50),
+i_data varchar(500),
 PRIMARY KEY(i_id) ) 
 ROW_FORMAT=COMPRESSED
 Engine=InnoDB;
@@ -150,7 +150,7 @@ s_dist_10 char(24),
 s_ytd decimal(8,0), 
 s_order_cnt smallint, 
 s_remote_cnt smallint,
-s_data varchar(50),
+s_data varchar(500),
 PRIMARY KEY(s_w_id, s_i_id) ) 
 ROW_FORMAT=COMPRESSED
 Engine=InnoDB ;
